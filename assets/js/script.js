@@ -3,16 +3,17 @@ var generateBtn = document.querySelector("#generate");
 
 
 function generatePassword() {
-var allOptions = [];
-// Prompt the user for the password criteria
-//    Password length 8 < x < 128
+  var allOptions = [];
+  // Prompt the user for the password criteria
+  //    Password length 8 < x < 128
   askLength = parseInt(prompt("How long would you like your password? Enter between 8 and 128 characters")); 
   if (!askLength) {
     alert("You must enter a value!");
+    generatePassword();
   } else if (askLength < 8 || askLength > 128) {
     askLength = parseInt(prompt("You must choose between 8 and 128"));
   } else {
-// ask about lower, upper, numbers, and symbols
+  // ask about lower, upper, numbers, and symbols
     confirmNumber = confirm("Will this password contain numbers?");
     confirmSymbols = confirm("Will this password contain special characters?");
     confirmUpper = confirm("Will this password contain Uppercase letters?");
@@ -34,36 +35,36 @@ var allOptions = [];
   if (confirmSymbols) {
     allOptions.push(getRandomSymbol);
   }
-//Generate the input
+  //Generate the input
 
 
 
-function getRandomLower() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-};
+  function getRandomLower() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
+  };
 
-function getRandomUpper() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
-};
+  function getRandomUpper() {
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+  };
 
-function getRandomNumber() {
-  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-};
+  function getRandomNumber() {
+    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+  };
 
-function getRandomSymbol() {
-  const symbols = '!@#$%^&*(){}[]=<>/,.';
-  return symbols[Math.floor(Math.random() * symbols.length)];
-};
+  function getRandomSymbol() {
+    const symbols = '!@#$%^&*(){}[]=<>/,.';
+    return symbols[Math.floor(Math.random() * symbols.length)];
+  };
 
-var passwordOpt = "";
+  var passwordOpt = "";
 
-for (var i = 0; i < askLength; i++) {
-  var arrayMath = Math.floor(Math.random() * allOptions.length);
-  var placeholder = allOptions[arrayMath];
-  passwordOpt += placeholder();
-};
-console.log(passwordOpt);
-//Display password to the page
+  for (var i = 0; i < askLength; i++) {
+    var arrayMath = Math.floor(Math.random() * allOptions.length);
+    var placeholder = allOptions[arrayMath];
+    passwordOpt += placeholder();
+  };
+  console.log(passwordOpt);
+  //Display password to the page
   return passwordOpt;
 }
 
