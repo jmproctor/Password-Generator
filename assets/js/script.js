@@ -19,9 +19,9 @@ function generatePassword() {
     confirmUpper = confirm("Will this password contain Uppercase letters?");
     confirmLower = confirm("Will this password contain Lowercase letters?");
   };
-// Validate the input
+  // Validate the input
   if (!confirmLower && !confirmNumber && !confirmSymbols && !confirmUpper) {
-    options = alert("You must choose a option!");
+    options = alert("You must choose an option!");
   };
   if (confirmLower) {
     allOptions.push(getRandomLower);
@@ -32,7 +32,7 @@ function generatePassword() {
   if (confirmNumber) {
     allOptions.push(getRandomNumber);
   };
-  if (confirmSymbols) {
+  if (confirmSymbols) { 
     allOptions.push(getRandomSymbol);
   };
   //Generate the input

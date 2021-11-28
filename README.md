@@ -11,3 +11,11 @@
     Javascript
 
 ## Website
+https://jmproctor.github.io/Password-Generator/
+
+## Resources
+http://www.mathcs.emory.edu/~cheung/Courses/170/Syllabus/05/char1.html for the Char codes
+
+## Contribution
+Made by John Proctor
+
