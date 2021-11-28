@@ -22,19 +22,19 @@ function generatePassword() {
 // Validate the input
   if (!confirmLower && !confirmNumber && !confirmSymbols && !confirmUpper) {
     options = alert("You must choose a option!");
-  }
+  };
   if (confirmLower) {
     allOptions.push(getRandomLower);
-  }
+  };
   if (confirmUpper) {
     allOptions.push(getRandomUpper);
-  }
+  };
   if (confirmNumber) {
     allOptions.push(getRandomNumber);
-  }
+  };
   if (confirmSymbols) {
     allOptions.push(getRandomSymbol);
-  }
+  };
   //Generate the input
 
 
